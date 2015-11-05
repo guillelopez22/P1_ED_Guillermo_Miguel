@@ -1,4 +1,4 @@
-package lista_enlazada;
+package p1_ed_guillermo_miguel;
 public class Lista {
 
     Nodo head;

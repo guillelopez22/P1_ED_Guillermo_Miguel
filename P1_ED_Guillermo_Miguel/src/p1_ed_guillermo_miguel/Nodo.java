@@ -1,4 +1,4 @@
-package lista_enlazada;
+package p1_ed_guillermo_miguel;
 public class Nodo {
     
     private int value;
@@ -28,7 +28,4 @@ public class Nodo {
     public void setNext(Nodo next) {
         this.next = next;
     }
-    
-    
-
 }
