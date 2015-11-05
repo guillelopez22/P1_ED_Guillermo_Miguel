@@ -13,12 +13,10 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Menu"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenu2ActionPerformed"/>
+          </Events>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Preparar Orden...."/>
-              </Properties>
-            </MenuItem>
             <Menu class="javax.swing.JMenu" name="jMenu5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar"/>
@@ -26,21 +24,27 @@
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Platillo"/>
+                    <Property name="text" type="java.lang.String" value="Ingrediente..."/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem3ActionPerformed"/>
+                  </Events>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Ingrediente"/>
+                    <Property name="text" type="java.lang.String" value="Platillo..."/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
                   </Events>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Ordenes"/>
+                    <Property name="text" type="java.lang.String" value="Orden...."/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem9ActionPerformed"/>
+                  </Events>
                 </MenuItem>
               </SubComponents>
             </Menu>

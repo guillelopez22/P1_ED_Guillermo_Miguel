@@ -5,6 +5,8 @@
  */
 package p1_ed_guillermo_miguel;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Memo
@@ -30,11 +32,10 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -48,16 +49,23 @@ public class MainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu2.setText("Menu");
-
-        jMenuItem9.setText("Preparar Orden....");
-        jMenu2.add(jMenuItem9);
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
 
         jMenu5.setText("Agregar");
 
-        jMenuItem3.setText("Platillo");
+        jMenuItem3.setText("Ingrediente...");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem3);
 
-        jMenuItem2.setText("Ingrediente");
+        jMenuItem2.setText("Platillo...");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -65,8 +73,13 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem2);
 
-        jMenuItem4.setText("Ordenes");
-        jMenu5.add(jMenuItem4);
+        jMenuItem9.setText("Orden....");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem9);
 
         jMenu2.add(jMenu5);
 
@@ -114,7 +127,33 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+        Plato plato = new Plato();
+        plato.pack();
+        plato.setVisible(true);
+        plato.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        Ingrediente ingrediente = new Ingrediente();
+        ingrediente.pack();
+        ingrediente.setVisible(true);
+        ingrediente.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);    
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        Orden orden = new Orden();
+        orden.pack();
+        orden.setVisible(true);
+        orden.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,7 +200,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
