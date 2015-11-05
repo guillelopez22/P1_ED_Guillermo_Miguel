@@ -7,8 +7,8 @@ public class Lista {
         head = new Nodo();
     }
 
-    public void insert(int num, int pos) {
-        Nodo newNodo= new Nodo(num);
+    public void insert(Object object, int pos) {
+        Nodo newNodo= new Nodo(object);
         Nodo newHead = head;
         int cont = 0;
         if(pos==0){
@@ -35,9 +35,9 @@ public class Lista {
         return 0;
     }
 
-    public int get(int pos) {
+    public Object get(int pos) {
         Nodo temp = head;
-        int valor= temp.getValue();
+        Object valor= temp.getValue();
         for(int i=0;i<pos;i++){
             temp=temp.getNext();
             if(i==pos){
@@ -56,7 +56,7 @@ public class Lista {
         temp.setNext(temp2.getNext());
     }
 
-    public int first() {
+    public Object first() {
         return head.getValue();
     }
     
@@ -78,4 +78,11 @@ public class Lista {
         }
         System.out.println("");
     } 
+    public int getSize(){
+        int cont=0;
+        while(head.getNext()!=null){
+            cont++;
+        }
+        return cont;
+    }
 }

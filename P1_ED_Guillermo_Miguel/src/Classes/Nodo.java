@@ -1,11 +1,11 @@
 package Classes;
 public class Nodo {
     
-    private int value;
+    private Object object;
     Nodo next;
     
-    public Nodo(int value){
-        this.value=value;
+    public Nodo(Object object){
+        this.object=object;
     }
     
     public Nodo(){
@@ -13,12 +13,12 @@ public class Nodo {
     }
             
 
-    public int getValue() {
-        return value;
+    public String getValue() {
+        return object.toString();
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setValue(Object object) {
+        this.object = object;
     }
 
     public Nodo getNext() {

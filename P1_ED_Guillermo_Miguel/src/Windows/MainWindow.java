@@ -5,6 +5,7 @@
  */
 package Windows;
 
+import Classes.Lista;
 import javax.swing.JFrame;
 
 /**
@@ -206,4 +207,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
+    public static Lista lista_ingredientes = new Lista();
+    
 }
