@@ -1,4 +1,4 @@
-package lista_enlazada;
+package Classes;
 public class Nodo {
     
     private int value;

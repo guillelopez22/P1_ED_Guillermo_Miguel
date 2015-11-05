@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package p1_ed_guillermo_miguel;
+package Classes;
 
 /**
  *
  * @author Miguel A. Ardon E
  */
-public class ordenes {
+public class ingredientes {
     
 }
