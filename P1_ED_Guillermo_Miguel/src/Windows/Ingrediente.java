@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Windows;
-import Classes.ingredientes;
+import Clases.ingredientes;
 import static Windows.MainWindow.lista_ingredientes;
 /**
  *

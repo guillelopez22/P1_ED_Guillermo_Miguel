@@ -5,7 +5,7 @@
  */
 package Windows;
 
-import Classes.Lista;
+import Clases.Lista;
 import javax.swing.JFrame;
 
 /**
