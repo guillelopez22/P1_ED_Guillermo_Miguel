@@ -8,7 +8,6 @@ package Windows;
 import Clases.ingredientes;
 import static Windows.MainWindow.cont_ingredientes;
 import static Windows.MainWindow.lista_ingredientes;
-import static Windows.MainWindow.model;
 import static Windows.Plato.cb_ingredientes;
 import javax.swing.DefaultComboBoxModel;
 
@@ -105,17 +104,19 @@ public class Ingrediente extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
-        model = new DefaultComboBoxModel();
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
         ingredientes Ingrediente = new ingredientes();
         Ingrediente.setNombre(tf_nomIngrediente.getText());
         Ingrediente.setDescripcion(tf_desc.getText());
         lista_ingredientes.insert(Ingrediente, cont_ingredientes);
         lista_ingredientes.Print_Lista();
-        model.addElement(Ingrediente);
         tf_nomIngrediente.setText("");
         tf_desc.setText("");
         cont_ingredientes ++;
-        cb_ingredientes.setModel(model);
+        for (int i = 0; i < cont_ingredientes; i++) {
+            System.out.println(lista_ingredientes.get(i));
+        }
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

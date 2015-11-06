@@ -237,7 +237,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
     public static Lista_Ingrediente lista_ingredientes = new Lista_Ingrediente();
-    public static DefaultComboBoxModel model = new DefaultComboBoxModel();
     public static int cont_ingredientes = 0;
     
 }
