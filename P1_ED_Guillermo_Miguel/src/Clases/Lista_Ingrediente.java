@@ -34,9 +34,9 @@ public class Lista_Ingrediente {
         return 0;
     }
 
-    public Object get(int pos) {
+    public ingredientes get(int pos) {
         Nodo_Ingrediente temp = head;
-        Object valor= temp.getValue();
+        ingredientes valor= temp.getValue();
         for(int i=0;i<pos;i++){
             temp=temp.getNext();
             if(i==pos){
@@ -55,7 +55,7 @@ public class Lista_Ingrediente {
         temp.setNext(temp2.getNext());
     }
 
-    public Object first() {
+    public ingredientes first() {
         return head.getValue();
     }
     
