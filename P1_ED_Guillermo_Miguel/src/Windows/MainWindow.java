@@ -6,15 +6,21 @@
 package Windows;
 
 import Clases.Lista_Ingrediente;
+import Clases.ingredientes;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
+import static Windows.modificar_ingredientes.cb_modificarIngre;
+import static Windows.modificar_ingredientes.tf_descr;
 
 /**
  *
  * @author Memo
  */
 public class MainWindow extends javax.swing.JFrame {
+    private Object tf_desc;
+    private Object tf_nomIngrediente;
+    
 
     /**
      * Creates new form MainWindow
@@ -182,6 +188,16 @@ public class MainWindow extends javax.swing.JFrame {
         ingredientes.pack();
         ingredientes.setVisible(true);
         ingredientes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        for (int i = 0; i < cont_ingredientes; i++) {
+            model.addElement(lista_ingredientes.get(i));
+        }
+        cb_modificarIngre.setModel(model);
+        tf_descr.setText(lista_ingredientes.get(cb_modificarIngre.getSelectedIndex()).getDescripcion());
+
+        
+        
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
