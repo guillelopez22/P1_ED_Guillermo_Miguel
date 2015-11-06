@@ -112,9 +112,10 @@ public class Ingrediente extends javax.swing.JFrame {
         } else {
             lista_ingredientes.insert(Ingrediente, lista_ingredientes.getSize());
         }
-        
+        model = new DefaultComboBoxModel(Ingrediente);
         tf_nomIngrediente.setText("");
         tf_desc.setText("");
+        
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
