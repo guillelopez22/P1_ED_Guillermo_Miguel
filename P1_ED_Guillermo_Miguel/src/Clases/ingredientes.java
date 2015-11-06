@@ -32,4 +32,3 @@ public class ingredientes {
         return "ingredientes{" + "nombre=" + nombre + '}';
     }
 } 
-}
