@@ -5,6 +5,11 @@
  */
 package Windows;
 
+import Clases.Lista_Ingrediente;
+import Clases.menu;
+import javax.swing.JOptionPane;
+import static Windows.MainWindow.lista_ingredientes;
+
 /**
  *
  * @author Memo
@@ -37,9 +42,10 @@ public class Plato extends javax.swing.JFrame {
         tf_desc = new javax.swing.JTextField();
         cb_ingredientes = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
-        jComboBox3 = new javax.swing.JComboBox();
+        cb_tiempo = new javax.swing.JComboBox();
         sp_precio = new javax.swing.JSpinner();
         jButton2 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,12 +68,29 @@ public class Plato extends javax.swing.JFrame {
         });
 
         jButton1.setText("add ingrediente");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--Seleccione un tiempo--", "5:00", "10:00", "15:00", "20:00", "25:00", "30:00", "35:00", "40:00", "45:00", "50:00", "55:00", "60:00" }));
+        cb_tiempo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--Seleccione un tiempo--", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60" }));
+        cb_tiempo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_tiempoActionPerformed(evt);
+            }
+        });
 
         sp_precio.setModel(new javax.swing.SpinnerNumberModel(1, 1, 100, 1));
 
         jButton2.setText("Add");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("minutos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,7 +111,10 @@ public class Plato extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(tf_nomPlato)
                                 .addComponent(tf_desc, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cb_tiempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel7))
                             .addComponent(sp_precio, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
@@ -131,7 +157,8 @@ public class Plato extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_tiempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(23, 23, 23))
@@ -143,6 +170,37 @@ public class Plato extends javax.swing.JFrame {
     private void cb_ingredientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_ingredientesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cb_ingredientesActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        if (cb_tiempo.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(this, "Favor seleccionar un tiempo");
+        } else {
+            Menu.setTimpo(Integer.parseInt((String) cb_tiempo.getSelectedItem()));
+            Menu.setNombre(tf_nomPlato.getText());
+            tf_nomPlato.setText("");
+            Menu.setDescrpcion(tf_desc.getText());
+            tf_desc.setText("");
+            Menu.setPrecio((int) sp_precio.getValue());
+            sp_precio.setValue(1);
+            Menu.setIngrediente(temp2);
+            cb_tiempo.setSelectedIndex(0);
+        }
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void cb_tiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_tiempoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_tiempoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        temp2 = new Lista_Ingrediente();
+        temp2.insert(lista_ingredientes.get(cb_ingredientes.getSelectedIndex()), cont);
+        cont++;
+        cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,17 +239,21 @@ public class Plato extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JComboBox cb_ingredientes;
+    private javax.swing.JComboBox cb_tiempo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JSpinner sp_precio;
     private javax.swing.JTextField tf_desc;
     private javax.swing.JTextField tf_nomPlato;
     // End of variables declaration//GEN-END:variables
+    menu Menu = new menu();
+    Lista_Ingrediente temp2 = new Lista_Ingrediente();
+    int cont;
 }

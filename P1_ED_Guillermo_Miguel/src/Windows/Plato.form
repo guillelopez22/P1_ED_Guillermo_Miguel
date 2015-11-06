@@ -40,7 +40,11 @@
                               <Component id="tf_nomPlato" alignment="0" max="32767" attributes="0"/>
                               <Component id="tf_desc" alignment="0" pref="150" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jComboBox3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="cb_tiempo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <Component id="sp_precio" alignment="0" min="-2" pref="63" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -97,7 +101,8 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cb_tiempo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jButton2" min="-2" max="-2" attributes="0"/>
@@ -158,27 +163,33 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="add ingrediente"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox3">
+    <Component class="javax.swing.JComboBox" name="cb_tiempo">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="13">
             <StringItem index="0" value="--Seleccione un tiempo--"/>
-            <StringItem index="1" value="5:00"/>
-            <StringItem index="2" value="10:00"/>
-            <StringItem index="3" value="15:00"/>
-            <StringItem index="4" value="20:00"/>
-            <StringItem index="5" value="25:00"/>
-            <StringItem index="6" value="30:00"/>
-            <StringItem index="7" value="35:00"/>
-            <StringItem index="8" value="40:00"/>
-            <StringItem index="9" value="45:00"/>
-            <StringItem index="10" value="50:00"/>
-            <StringItem index="11" value="55:00"/>
-            <StringItem index="12" value="60:00"/>
+            <StringItem index="1" value="5"/>
+            <StringItem index="2" value="10"/>
+            <StringItem index="3" value="15"/>
+            <StringItem index="4" value="20"/>
+            <StringItem index="5" value="25"/>
+            <StringItem index="6" value="30"/>
+            <StringItem index="7" value="35"/>
+            <StringItem index="8" value="40"/>
+            <StringItem index="9" value="45"/>
+            <StringItem index="10" value="50"/>
+            <StringItem index="11" value="55"/>
+            <StringItem index="12" value="60"/>
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_tiempoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSpinner" name="sp_precio">
       <Properties>
@@ -190,6 +201,14 @@
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Add"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="minutos"/>
       </Properties>
     </Component>
   </SubComponents>
