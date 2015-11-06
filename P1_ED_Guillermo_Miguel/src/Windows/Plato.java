@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import static Windows.MainWindow.lista_ingredientes;
 import static Windows.MainWindow.lista_menu;
 import javax.swing.DefaultComboBoxModel;
+import static Windows.MainWindow.Menu;
 
 /**
  *
@@ -191,18 +192,8 @@ public class Plato extends javax.swing.JFrame {
             cb_tiempo.setSelectedIndex(0);
             lista_menu.insert(Menu, cont_menu);
             cont_menu ++;
-            for (int i = 0; i < cont_menu; i++) {
-                System.out.println(lista_menu.get(i));
-            }
-            for (int i = 0; i < cont_menu; i++) {
-                System.out.println(lista_menu.get(i));
-            }
         }
-        DefaultComboBoxModel model = new DefaultComboBoxModel();
-        for (int i = 0; i < cont_ingredientes; i++) {
-            model.addElement(lista_ingredientes.get(i));
-        }
-        cb_ingredientes.setModel(model);
+
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -270,7 +261,7 @@ public class Plato extends javax.swing.JFrame {
     private javax.swing.JTextField tf_desc;
     private javax.swing.JTextField tf_nomPlato;
     // End of variables declaration//GEN-END:variables
-    menu Menu = new menu();
+
     Lista_Ingrediente temp2 = new Lista_Ingrediente();
     int cont;
 }
