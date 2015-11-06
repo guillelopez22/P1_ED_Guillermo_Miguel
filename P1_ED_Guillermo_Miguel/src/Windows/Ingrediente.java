@@ -4,8 +4,13 @@
  * and open the template in the editor.
  */
 package Windows;
+
 import Clases.ingredientes;
 import static Windows.MainWindow.lista_ingredientes;
+import static Windows.Plato.cb_ingredientes;
+import static Windows.MainWindow.model;
+import javax.swing.DefaultComboBoxModel;
+
 /**
  *
  * @author Memo
@@ -98,8 +103,17 @@ public class Ingrediente extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        ingredientes Ingrediente = new ingredientes();
-        lista_ingredientes.insert(evt, WIDTH);
+        model = new DefaultComboBoxModel();
+        ingredientes Ingrediente = new ingredientes(tf_nomIngrediente.getText(), tf_desc.getText());
+        if (lista_ingredientes.get(0) == null) {
+            lista_ingredientes.insert(Ingrediente, 0);
+        } else {
+            lista_ingredientes.insert(Ingrediente, lista_ingredientes.getSize());
+        }
+        
+        tf_nomIngrediente.setText("");
+        tf_desc.setText("");
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

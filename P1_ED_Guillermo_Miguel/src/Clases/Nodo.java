@@ -1,6 +1,6 @@
 package Clases;
 public class Nodo {
-    private Object object;
+    private Object object = null;
     Nodo next;
     
     public Nodo(Object object){
@@ -12,8 +12,8 @@ public class Nodo {
     }
             
 
-    public String getValue() {
-        return object.toString();
+    public Object getValue() {
+        return object;
     }
 
     public void setValue(Object object) {
