@@ -8,6 +8,7 @@ package Windows;
 import Clases.Lista_Ingrediente;
 import Clases.Lista_Menu;
 import Clases.Lista_ordenes;
+import static Windows.Orden.cb_platos_pedidos;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
@@ -177,6 +178,12 @@ public class MainWindow extends javax.swing.JFrame {
         orden.pack();
         orden.setVisible(true);
         orden.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        for (int i = 0; i < lista_menu.getSize(); i++) {
+            System.out.println(lista_menu.get(i));
+            model.addElement(lista_menu.get(i));
+        }
+        cb_platos_pedidos.setModel(model);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
@@ -249,5 +256,6 @@ public class MainWindow extends javax.swing.JFrame {
     public static Lista_ordenes lista_ordenes = new Lista_ordenes();
     public static Lista_Menu lista_menu = new Lista_Menu();
     public static int cont_ingredientes = 0;
+    public static int cont_menu = 0;
     
 }
