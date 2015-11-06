@@ -144,10 +144,6 @@ public class MainWindow extends javax.swing.JFrame {
         plato.pack();
         plato.setVisible(true);
         plato.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        for (int i = 0; i < lista_ingredientes.getSize(); i++) {
-            model.addElement(lista_ingredientes.get(i));
-        }
-        cb_ingredientes.setModel(model);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
@@ -186,6 +182,7 @@ public class MainWindow extends javax.swing.JFrame {
         platos.pack();
         platos.setVisible(true);
         platos.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     /**
@@ -240,6 +237,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
     public static Lista_Ingrediente lista_ingredientes = new Lista_Ingrediente();
-    public static DefaultComboBoxModel model;
+    public static DefaultComboBoxModel model = new DefaultComboBoxModel();
+    public static int cont_ingredientes = 0;
     
 }
