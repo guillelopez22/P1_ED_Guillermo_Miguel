@@ -6,7 +6,12 @@
 package Windows;
 
 import Clases.Lista_Ingrediente;
+<<<<<<< HEAD
 import Clases.ingredientes;
+=======
+import Clases.Lista_Menu;
+import Clases.Lista_ordenes;
+>>>>>>> d7e0af8e3bb91f515c4dddd5c25b1871fc729025
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
@@ -260,6 +265,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
     public static Lista_Ingrediente lista_ingredientes = new Lista_Ingrediente();
+    public static Lista_ordenes lista_ordenes = new Lista_ordenes();
+    public static Lista_Menu lista_menu = new Lista_Menu();
     public static int cont_ingredientes = 0;
     
 }
