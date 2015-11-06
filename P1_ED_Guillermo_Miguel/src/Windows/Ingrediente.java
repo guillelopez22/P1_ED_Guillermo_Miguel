@@ -108,16 +108,7 @@ public class Ingrediente extends javax.swing.JFrame {
         ingredientes Ingrediente = new ingredientes();
         Ingrediente.setNombre(tf_nomIngrediente.getText());
         Ingrediente.setDescripcion(tf_desc.getText());
-
-        if (lista_ingredientes.get(0) == null) {
-            lista_ingredientes.insert(Ingrediente, 0);
-        } else {
-            lista_ingredientes.insert(Ingrediente, lista_ingredientes.getSize());
-        }
-        
-        tf_nomIngrediente.setText("");
-        tf_desc.setText("");
-        
+       
 
         lista_ingredientes.insert(Ingrediente, cont_ingredientes);
         lista_ingredientes.Print_Lista();

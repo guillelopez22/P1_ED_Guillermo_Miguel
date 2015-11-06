@@ -39,9 +39,7 @@ public class Lista_Ingrediente {
         ingredientes valor= temp.getValue();
         for(int i=0;i<pos;i++){
             temp=temp.getNext();
-            if(i==pos){
-                valor = temp.getValue();
-            }
+            valor = temp.getValue();
         }
         return valor;
     }
@@ -55,7 +53,7 @@ public class Lista_Ingrediente {
         temp.setNext(temp2.getNext());
     }
 
-    public ingredientes first() {
+    public Object first() {
         return head.getValue();
     }
     
