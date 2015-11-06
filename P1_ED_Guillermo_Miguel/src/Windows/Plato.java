@@ -7,8 +7,13 @@ package Windows;
 
 import Clases.Lista_Ingrediente;
 import Clases.menu;
+import static Windows.MainWindow.cont_ingredientes;
+import static Windows.MainWindow.cont_menu;
 import javax.swing.JOptionPane;
 import static Windows.MainWindow.lista_ingredientes;
+import static Windows.MainWindow.lista_menu;
+import javax.swing.DefaultComboBoxModel;
+import static Windows.MainWindow.Menu;
 
 /**
  *
@@ -185,8 +190,11 @@ public class Plato extends javax.swing.JFrame {
             sp_precio.setValue(1);
             Menu.setIngrediente(temp2);
             cb_tiempo.setSelectedIndex(0);
+            lista_menu.insert(Menu, cont_menu);
+            cont_menu ++;
         }
 
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void cb_tiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_tiempoActionPerformed
@@ -253,7 +261,7 @@ public class Plato extends javax.swing.JFrame {
     private javax.swing.JTextField tf_desc;
     private javax.swing.JTextField tf_nomPlato;
     // End of variables declaration//GEN-END:variables
-    menu Menu = new menu();
+
     Lista_Ingrediente temp2 = new Lista_Ingrediente();
     int cont;
 }

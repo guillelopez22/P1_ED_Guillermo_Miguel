@@ -75,9 +75,9 @@ public class Lista_Ingrediente {
         }
         System.out.println("");
     } 
-    public int getSize(){
-        int cont=0;
-        while(head.getNext()!=null){
+    public int getSize() {
+        int cont = 0;
+        while (head.getNext() != null) {
             cont++;
         }
         return cont;

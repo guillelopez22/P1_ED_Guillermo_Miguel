@@ -59,6 +59,6 @@ public class menu {
 
     @Override
     public String toString() {
-        return "menu{" + "nombre=" + nombre + '}';
+        return nombre;
     }
 }

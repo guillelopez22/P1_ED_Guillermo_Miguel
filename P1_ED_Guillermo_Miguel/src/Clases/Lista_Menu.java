@@ -78,4 +78,12 @@ public class Lista_Menu {
         }
         System.out.println("");
     }
+
+    public int getSize() {
+        int cont = 0;
+        while (head.getNext() != null) {
+            cont++;
+        }
+        return cont;
+    }
 }
