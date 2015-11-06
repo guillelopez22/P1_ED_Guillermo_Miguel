@@ -2,14 +2,14 @@ package Clases;
 public class ordenes {
     int num_orden;
     String nombre;
-    Lista patos;
+    Lista_Ingrediente patos;
     int total_pagar;
     int tiempo_total;
 
     public ordenes() {
     }
 
-    public ordenes(int num_orden, String nombre, Lista patos, int total_pagar, int tiempo_total) {
+    public ordenes(int num_orden, String nombre, Lista_Ingrediente patos, int total_pagar, int tiempo_total) {
         this.num_orden = num_orden;
         this.nombre = nombre;
         this.patos = patos;
@@ -33,11 +33,11 @@ public class ordenes {
         this.nombre = nombre;
     }
 
-    public Lista getPatos() {
+    public Lista_Ingrediente getPatos() {
         return patos;
     }
 
-    public void setPatos(Lista patos) {
+    public void setPatos(Lista_Ingrediente patos) {
         this.patos = patos;
     }
 

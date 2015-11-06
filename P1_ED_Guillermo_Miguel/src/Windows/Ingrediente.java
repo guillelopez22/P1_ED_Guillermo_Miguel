@@ -104,7 +104,9 @@ public class Ingrediente extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         model = new DefaultComboBoxModel();
-        ingredientes Ingrediente = new ingredientes(tf_nomIngrediente.getText(), tf_desc.getText());
+        ingredientes Ingrediente = new ingredientes();
+        Ingrediente.setNombre(tf_nomIngrediente.getText());
+        Ingrediente.setDescripcion(tf_desc.getText());
         if (lista_ingredientes.get(0) == null) {
             lista_ingredientes.insert(Ingrediente, 0);
         } else {

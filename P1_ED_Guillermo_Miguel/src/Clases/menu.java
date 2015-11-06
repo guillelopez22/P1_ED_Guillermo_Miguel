@@ -3,13 +3,13 @@ public class menu {
     String nombre;
     String descrpcion;
     int precio;
-    Lista ingrediente;
+    Lista_Ingrediente ingrediente;
     int timpo;
 
     public menu() {
     }
 
-    public menu(String nombre, String descrpcion, int precio, Lista ingrediente, int timpo) {
+    public menu(String nombre, String descrpcion, int precio, Lista_Ingrediente ingrediente, int timpo) {
         this.nombre = nombre;
         this.descrpcion = descrpcion;
         this.precio = precio;
@@ -41,11 +41,11 @@ public class menu {
         this.precio = precio;
     }
 
-    public Lista getIngrediente() {
+    public Lista_Ingrediente getIngrediente() {
         return ingrediente;
     }
 
-    public void setIngrediente(Lista ingrediente) {
+    public void setIngrediente(Lista_Ingrediente ingrediente) {
         this.ingrediente = ingrediente;
     }
 

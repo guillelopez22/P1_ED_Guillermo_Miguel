@@ -5,7 +5,7 @@
  */
 package Windows;
 
-import Clases.Lista;
+import Clases.Lista_Ingrediente;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
@@ -227,7 +227,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
-    public static Lista lista_ingredientes = new Lista();
+    public static Lista_Ingrediente lista_ingredientes = new Lista_Ingrediente();
     public static DefaultComboBoxModel model;
     
 }

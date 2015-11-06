@@ -1,14 +1,14 @@
 package Clases;
-public class Lista {
-    Nodo head;
+public class Lista_Ingrediente {
+    Nodo_Ingrediente head;
 
-    public Lista() {
-        head = new Nodo();
+    public Lista_Ingrediente() {
+        head = new Nodo_Ingrediente();
     }
 
-    public void insert(Object object, int pos) {
-        Nodo newNodo= new Nodo(object);
-        Nodo newHead = head;
+    public void insert(ingredientes ingrediente, int pos) {
+        Nodo_Ingrediente newNodo= new Nodo_Ingrediente(ingrediente);
+        Nodo_Ingrediente newHead = head;
         int cont = 0;
         if(pos==0){
             newNodo.setNext(head);
@@ -21,12 +21,12 @@ public class Lista {
                 break;
             }
         }
-        Nodo n = newHead.getNext();
+        Nodo_Ingrediente n = newHead.getNext();
         newHead.setNext(newNodo);
         newNodo.setNext(n);
     }
     
-    public void setHead(Nodo head){
+    public void setHead(Nodo_Ingrediente head){
         this.head=head;
     }
 
@@ -35,7 +35,7 @@ public class Lista {
     }
 
     public Object get(int pos) {
-        Nodo temp = head;
+        Nodo_Ingrediente temp = head;
         Object valor= temp.getValue();
         for(int i=0;i<pos;i++){
             temp=temp.getNext();
@@ -47,11 +47,11 @@ public class Lista {
     }
 
     public void delete(int pos) {
-        Nodo temp = head;
+        Nodo_Ingrediente temp = head;
         for (int i=1;i<pos-1;i++){
             temp = temp.getNext();
         }
-        Nodo temp2 = temp.getNext();
+        Nodo_Ingrediente temp2 = temp.getNext();
         temp.setNext(temp2.getNext());
     }
 
@@ -60,7 +60,7 @@ public class Lista {
     }
     
     public void Print_Lista(){        
-        Nodo temp = head;
+        Nodo_Ingrediente temp = head;
         int cont = 0;
         while(temp != null){
             if(cont == 0){
