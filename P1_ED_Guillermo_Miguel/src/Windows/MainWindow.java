@@ -91,6 +91,11 @@ public class MainWindow extends javax.swing.JFrame {
         jMenu6.setText("Ingredientes");
 
         jMenuItem5.setText("Modificar");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem5);
 
         jMenuItem6.setText("Eliminar");
@@ -155,6 +160,13 @@ public class MainWindow extends javax.swing.JFrame {
         orden.setVisible(true);
         orden.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        modificar_ingredientes ingredientes = new modificar_ingredientes();
+        ingredientes.pack();
+        ingredientes.setVisible(true);
+        ingredientes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
