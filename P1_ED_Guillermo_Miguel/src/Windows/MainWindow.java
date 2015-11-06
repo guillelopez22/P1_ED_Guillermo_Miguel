@@ -108,6 +108,11 @@ public class MainWindow extends javax.swing.JFrame {
         jMenu7.setText("Platillos");
 
         jMenuItem7.setText("Modificar");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem7);
 
         jMenuItem8.setText("Eliminar");
@@ -175,6 +180,13 @@ public class MainWindow extends javax.swing.JFrame {
         ingredientes.setVisible(true);
         ingredientes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        modificar_plato platos = new modificar_plato();
+        platos.pack();
+        platos.setVisible(true);
+        platos.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     /**
      * @param args the command line arguments
