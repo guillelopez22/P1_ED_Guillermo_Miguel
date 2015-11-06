@@ -108,18 +108,17 @@ public class Ingrediente extends javax.swing.JFrame {
         ingredientes Ingrediente = new ingredientes();
         Ingrediente.setNombre(tf_nomIngrediente.getText());
         Ingrediente.setDescripcion(tf_desc.getText());
-<<<<<<< HEAD
+
         if (lista_ingredientes.get(0) == null) {
             lista_ingredientes.insert(Ingrediente, 0);
         } else {
             lista_ingredientes.insert(Ingrediente, lista_ingredientes.getSize());
         }
-        model = new DefaultComboBoxModel(Ingrediente);
+        
         tf_nomIngrediente.setText("");
         tf_desc.setText("");
         
 
-=======
         lista_ingredientes.insert(Ingrediente, cont_ingredientes);
         lista_ingredientes.Print_Lista();
         tf_nomIngrediente.setText("");
@@ -130,7 +129,7 @@ public class Ingrediente extends javax.swing.JFrame {
         }
         
         
->>>>>>> 12cef33bcca23d7e95e692b10f72e0a5d1f1189e
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
