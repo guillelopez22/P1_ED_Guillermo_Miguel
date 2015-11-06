@@ -6,12 +6,9 @@
 package Windows;
 
 import Clases.Lista_Ingrediente;
-<<<<<<< HEAD
 import Clases.ingredientes;
-=======
 import Clases.Lista_Menu;
 import Clases.Lista_ordenes;
->>>>>>> d7e0af8e3bb91f515c4dddd5c25b1871fc729025
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
