@@ -16,6 +16,8 @@ import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
 import static Windows.modificar_ingredientes.cb_modificarIngre;
 import static Windows.modificar_ingredientes.tf_descr;
+import static Windows.eliminar_ingrediente.cb_eliminarIngre;
+
 
 /**
  *
@@ -111,6 +113,11 @@ public class MainWindow extends javax.swing.JFrame {
         jMenu6.add(jMenuItem5);
 
         jMenuItem6.setText("Eliminar");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem6);
 
         jMenu3.add(jMenu6);
@@ -215,9 +222,25 @@ public class MainWindow extends javax.swing.JFrame {
         modificar_plato platos = new modificar_plato();
         platos.pack();
         platos.setVisible(true);
+        platos.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        eliminar_ingrediente elimingrediente = new eliminar_ingrediente();
+        elimingrediente.pack();
+        elimingrediente.setVisible(true);
+        elimingrediente.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        for (int i = 0; i < cont_ingredientes; i++) {
+            model.addElement(lista_ingredientes.get(i));
+        }
+        cb_eliminarIngre.setModel(model);
+        tf_descr.setText(lista_ingredientes.get(cb_eliminarIngre.getSelectedIndex()).getDescripcion());
+        
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
