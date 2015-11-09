@@ -52,18 +52,18 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="numero_de_orden" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lb_numero" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="total_a_pagar" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lb_total" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" attributes="0">
                                               <Component id="cb_platos_pedidos" min="-2" pref="142" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="tiempo_total" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lb_ttotal" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -89,7 +89,7 @@
               <EmptySpace pref="38" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="numero_de_orden" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lb_numero" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -105,12 +105,12 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="total_a_pagar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lb_total" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tiempo_total" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lb_ttotal" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
@@ -129,10 +129,13 @@
         <Property name="text" type="java.lang.String" value="Numero de Orden:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="numero_de_orden">
+    <Component class="javax.swing.JLabel" name="lb_numero">
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel3"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -166,20 +169,26 @@
         <Property name="text" type="java.lang.String" value="Total:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="total_a_pagar">
+    <Component class="javax.swing.JLabel" name="lb_total">
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel6"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tiempo Total:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="tiempo_total">
+    <Component class="javax.swing.JLabel" name="lb_ttotal">
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel8"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
