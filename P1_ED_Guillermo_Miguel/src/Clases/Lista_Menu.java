@@ -8,7 +8,7 @@ public class Lista_Menu {
         head = new Nodo_Menu();
     }
 
-    public void insert(menu menu, int pos) {
+    public void insert(Orden menu, int pos) {
         Nodo_Menu newNodo = new Nodo_Menu(menu);
         Nodo_Menu newHead = head;
         int cont = 0;
@@ -36,9 +36,9 @@ public class Lista_Menu {
         return 0;
     }
 
-    public menu get(int pos) {
+    public Orden get(int pos) {
         Nodo_Menu temp = head;
-        menu valor = temp.getValue();
+        Orden valor = temp.getValue();
         for (int i = 0; i < pos; i++) {
             temp = temp.getNext();
             valor = temp.getValue();
@@ -56,7 +56,7 @@ public class Lista_Menu {
         temp.setNext(temp2.getNext());
     }
 
-    public menu first() {
+    public Orden first() {
         return head.getValue();
     }
 

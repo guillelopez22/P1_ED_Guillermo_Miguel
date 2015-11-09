@@ -1,9 +1,9 @@
 package Clases;
 public class Nodo_Menu {
-    menu menu = null;
+    Orden menu = null;
     Nodo_Menu next;
 
-    public Nodo_Menu(menu menu){
+    public Nodo_Menu(Orden menu){
         this.menu=menu;
     }
     
@@ -12,11 +12,11 @@ public class Nodo_Menu {
     }
             
 
-    public menu getValue() {
+    public Orden getValue() {
         return menu;
     }
 
-    public void setValue(menu menu) {
+    public void setValue(Orden menu) {
         this.menu = menu;
     }
 
