@@ -29,15 +29,15 @@ public class Orden extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        numero_de_orden = new javax.swing.JLabel();
+        lb_numero = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         tf_nomCliente = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         cb_platos_pedidos = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
-        total_a_pagar = new javax.swing.JLabel();
+        lb_total = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        tiempo_total = new javax.swing.JLabel();
+        lb_ttotal = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -47,7 +47,7 @@ public class Orden extends javax.swing.JFrame {
 
         jLabel2.setText("Numero de Orden:");
 
-        numero_de_orden.setText("jLabel3");
+        lb_numero.setText("jLabel3");
 
         jLabel3.setText("Nombre de Cliente: ");
 
@@ -57,11 +57,11 @@ public class Orden extends javax.swing.JFrame {
 
         jLabel5.setText("Total:");
 
-        total_a_pagar.setText("jLabel6");
+        lb_total.setText("jLabel6");
 
         jLabel6.setText("Tiempo Total:");
 
-        tiempo_total.setText("jLabel8");
+        lb_ttotal.setText("jLabel8");
 
         jButton1.setText("Aceptar");
 
@@ -95,16 +95,16 @@ public class Orden extends javax.swing.JFrame {
                                         .addComponent(tf_nomCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addComponent(numero_de_orden))
+                                        .addComponent(lb_numero))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(10, 10, 10)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(total_a_pagar)
+                                            .addComponent(lb_total)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(cb_platos_pedidos, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jButton2))
-                                            .addComponent(tiempo_total))))))
+                                            .addComponent(lb_ttotal))))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
@@ -120,7 +120,7 @@ public class Orden extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(numero_de_orden))
+                    .addComponent(lb_numero))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -133,11 +133,11 @@ public class Orden extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(total_a_pagar))
+                    .addComponent(lb_total))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(tiempo_total))
+                    .addComponent(lb_ttotal))
                 .addGap(9, 9, 9)
                 .addComponent(jButton1))
         );
@@ -190,9 +190,9 @@ public class Orden extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel numero_de_orden;
+    public static javax.swing.JLabel lb_numero;
+    public static javax.swing.JLabel lb_total;
+    public static javax.swing.JLabel lb_ttotal;
     private javax.swing.JTextField tf_nomCliente;
-    private javax.swing.JLabel tiempo_total;
-    private javax.swing.JLabel total_a_pagar;
     // End of variables declaration//GEN-END:variables
 }

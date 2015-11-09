@@ -14,6 +14,9 @@ import static Windows.Orden.cb_platos_pedidos;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
+import static Windows.Orden.lb_numero;
+import static Windows.Orden.lb_total;
+import static Windows.Orden.lb_ttotal;
 
 
 /**
@@ -165,7 +168,7 @@ public class MainWindow extends javax.swing.JFrame {
             model.addElement(lista_ingredientes.get(i));
         }
         cb_ingredientes.setModel(model);
-        Menu = new menu();
+
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
@@ -186,6 +189,15 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
+        Orden orden = new Orden();
+        orden.pack();
+        orden.setVisible(true);
+        orden.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        for (int i = 0; i < cont_menu; i++) {
+            model.addElement(lista_menu.get(i));
+        }
+        cb_platos_pedidos.setModel(model);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
@@ -259,7 +271,6 @@ public class MainWindow extends javax.swing.JFrame {
     public static Lista_Menu lista_menu = new Lista_Menu();
     public static int cont_ingredientes = 0;
     public static int cont_menu = 0;
-    public static menu Menu;
-    public static DefaultComboBoxModel model = new DefaultComboBoxModel();
+    
     
 }
