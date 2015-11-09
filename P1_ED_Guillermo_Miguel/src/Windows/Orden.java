@@ -5,6 +5,9 @@
  */
 package Windows;
 
+import Clases.menu;
+import static Windows.MainWindow.lista_menu;
+
 /**
  *
  * @author Memo
@@ -66,6 +69,11 @@ public class Orden extends javax.swing.JFrame {
         jButton1.setText("Aceptar");
 
         jButton2.setText("Add");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,6 +153,11 @@ public class Orden extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        temp = lista_menu.get(cb_platos_pedidos.getSelectedIndex());
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -195,4 +208,5 @@ public class Orden extends javax.swing.JFrame {
     public static javax.swing.JLabel lb_ttotal;
     private javax.swing.JTextField tf_nomCliente;
     // End of variables declaration//GEN-END:variables
+    menu temp = new menu();
 }

@@ -271,6 +271,7 @@ public class MainWindow extends javax.swing.JFrame {
     public static Lista_Menu lista_menu = new Lista_Menu();
     public static int cont_ingredientes = 0;
     public static int cont_menu = 0;
+    public static int a_pagar = 0;
     
     
 }

@@ -206,6 +206,7 @@ public class Plato extends javax.swing.JFrame {
         temp2.insert(lista_ingredientes.get(cb_ingredientes.getSelectedIndex()), cont);
         cont++;
         cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
+        lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
