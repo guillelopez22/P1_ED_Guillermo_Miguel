@@ -154,7 +154,7 @@ public class Orden extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Clases.Orden temp = new Clases.Orden();
+        Clases.Menu temp = new Clases.Menu();
         temp = lista_menu.get(cb_platos_pedidos.getSelectedIndex());
         a_pagar = a_pagar + temp.getPrecio();
         tiempo_total =  tiempo_total + temp.getTimpo();

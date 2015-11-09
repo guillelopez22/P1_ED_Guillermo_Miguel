@@ -6,7 +6,7 @@
 package Windows;
 
 import Clases.Lista_Ingrediente;
-import Clases.Orden;
+import Clases.Menu;
 import static Windows.MainWindow.cont_menu;
 import javax.swing.JOptionPane;
 import static Windows.MainWindow.lista_ingredientes;
@@ -176,7 +176,7 @@ public class Plato extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Orden Menu = new Orden();
+        Menu Menu = new Menu();
         if (cb_tiempo.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(this, "Favor seleccionar un tiempo");
         } else {

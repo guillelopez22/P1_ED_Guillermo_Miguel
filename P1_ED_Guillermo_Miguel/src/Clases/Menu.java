@@ -1,15 +1,15 @@
 package Clases;
-public class Orden {
+public class Menu {
     String nombre;
     String descrpcion;
     int precio;
     Lista_Ingrediente ingrediente;
     int timpo;
 
-    public Orden() {
+    public Menu() {
     }
 
-    public Orden(String nombre, String descrpcion, int precio, Lista_Ingrediente ingrediente, int timpo) {
+    public Menu(String nombre, String descrpcion, int precio, Lista_Ingrediente ingrediente, int timpo) {
         this.nombre = nombre;
         this.descrpcion = descrpcion;
         this.precio = precio;
