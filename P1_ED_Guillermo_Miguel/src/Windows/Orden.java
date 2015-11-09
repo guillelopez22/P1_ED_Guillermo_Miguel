@@ -6,7 +6,9 @@
 package Windows;
 
 import Clases.menu;
+import static Windows.MainWindow.a_pagar;
 import static Windows.MainWindow.lista_menu;
+import static Windows.MainWindow.tiempo_total;
 
 /**
  *
@@ -50,8 +52,6 @@ public class Orden extends javax.swing.JFrame {
 
         jLabel2.setText("Numero de Orden:");
 
-        lb_numero.setText("jLabel3");
-
         jLabel3.setText("Nombre de Cliente: ");
 
         jLabel4.setText("Platos Pedidos:");
@@ -60,11 +60,11 @@ public class Orden extends javax.swing.JFrame {
 
         jLabel5.setText("Total:");
 
-        lb_total.setText("jLabel6");
+        lb_total.setText("0");
 
         jLabel6.setText("Tiempo Total:");
 
-        lb_ttotal.setText("jLabel8");
+        lb_ttotal.setText("0");
 
         jButton1.setText("Aceptar");
 
@@ -155,7 +155,14 @@ public class Orden extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        menu temp = new menu();
         temp = lista_menu.get(cb_platos_pedidos.getSelectedIndex());
+        a_pagar = a_pagar + temp.getPrecio();
+        tiempo_total =  tiempo_total + temp.getTimpo();
+        lb_ttotal.setText(Integer.toString(tiempo_total)  + ":00");
+        lb_total.setText(Integer.toString(a_pagar));
+        cb_platos_pedidos.removeItemAt(cb_platos_pedidos.getSelectedIndex());
+        lista_menu.delete(cb_platos_pedidos.getSelectedIndex());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -208,5 +215,5 @@ public class Orden extends javax.swing.JFrame {
     public static javax.swing.JLabel lb_ttotal;
     private javax.swing.JTextField tf_nomCliente;
     // End of variables declaration//GEN-END:variables
-    menu temp = new menu();
+
 }

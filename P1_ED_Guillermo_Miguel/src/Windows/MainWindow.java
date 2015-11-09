@@ -6,17 +6,13 @@
 package Windows;
 
 import Clases.Lista_Ingrediente;
-import Clases.ingredientes;
 import Clases.Lista_Menu;
 import Clases.Lista_ordenes;
-import Clases.menu;
 import static Windows.Orden.cb_platos_pedidos;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
 import static Windows.Orden.lb_numero;
-import static Windows.Orden.lb_total;
-import static Windows.Orden.lb_ttotal;
 
 
 /**
@@ -171,10 +167,12 @@ public class MainWindow extends javax.swing.JFrame {
         orden.setVisible(true);
         orden.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         DefaultComboBoxModel model = new DefaultComboBoxModel();
+        num_orden ++;
         for (int i = 0; i < cont_menu; i++) {
             model.addElement(lista_menu.get(i));
         }
         cb_platos_pedidos.setModel(model);
+        lb_numero.setText(Integer.toString(num_orden));
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
@@ -240,6 +238,8 @@ public class MainWindow extends javax.swing.JFrame {
     public static int cont_ingredientes = 0;
     public static int cont_menu = 0;
     public static int a_pagar = 0;
+    public static int num_orden = 0;
+    public static int tiempo_total = 0;
     
     
 }
