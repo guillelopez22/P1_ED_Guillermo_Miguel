@@ -14,15 +14,14 @@ import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
 import static Windows.Orden.lb_numero;
 
-
 /**
  *
  * @author Memo
  */
 public class MainWindow extends javax.swing.JFrame {
+
     private Object tf_desc;
     private Object tf_nomIngrediente;
-    
 
     /**
      * Creates new form MainWindow
@@ -134,7 +133,7 @@ public class MainWindow extends javax.swing.JFrame {
         plato.pack();
         plato.setVisible(true);
         plato.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-             
+
         DefaultComboBoxModel model = new DefaultComboBoxModel();
         for (int i = 0; i < cont_ingredientes; i++) {
             System.out.println(lista_ingredientes.get(i));
@@ -146,8 +145,8 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-        
-        
+
+
     }//GEN-LAST:event_jMenu2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -155,25 +154,10 @@ public class MainWindow extends javax.swing.JFrame {
         Ingrediente ingrediente = new Ingrediente();
         ingrediente.pack();
         ingrediente.setVisible(true);
-        ingrediente.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
+        ingrediente.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-        
+
     }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
-        Orden orden = new Orden();
-        orden.pack();
-        orden.setVisible(true);
-        orden.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        DefaultComboBoxModel model = new DefaultComboBoxModel();
-        num_orden ++;
-        for (int i = 0; i < cont_menu; i++) {
-            model.addElement(lista_menu.get(i));
-        }
-        cb_platos_pedidos.setModel(model);
-        lb_numero.setText(Integer.toString(num_orden));
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         modificar_plato platos = new modificar_plato();
@@ -183,6 +167,21 @@ public class MainWindow extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        Orden orden = new Orden();
+        orden.pack();
+        orden.setVisible(true);
+        orden.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        num_orden++;
+        for (int i = 0; i < cont_menu; i++) {
+            model.addElement(lista_menu.get(i));
+        }
+        cb_platos_pedidos.setModel(model);
+        lb_numero.setText(Integer.toString(num_orden));
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,6 +239,5 @@ public class MainWindow extends javax.swing.JFrame {
     public static int a_pagar = 0;
     public static int num_orden = 0;
     public static int tiempo_total = 0;
-    
-    
+
 }
