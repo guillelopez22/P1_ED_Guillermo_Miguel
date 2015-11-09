@@ -113,7 +113,7 @@ public class modificar_plato extends javax.swing.JFrame {
                             .addComponent(cb_modplato, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(173, 173, 173)
+                .addGap(165, 165, 165)
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
