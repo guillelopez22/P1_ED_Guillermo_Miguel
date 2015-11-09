@@ -52,7 +52,7 @@ public class Plato extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Add Plato");
+        jLabel1.setText("Agregando Plato");
 
         jLabel2.setText("Nombre: ");
 
