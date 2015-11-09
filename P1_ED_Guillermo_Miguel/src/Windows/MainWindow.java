@@ -260,5 +260,6 @@ public class MainWindow extends javax.swing.JFrame {
     public static int cont_ingredientes = 0;
     public static int cont_menu = 0;
     public static menu Menu;
+    public static DefaultComboBoxModel model = new DefaultComboBoxModel();
     
 }
