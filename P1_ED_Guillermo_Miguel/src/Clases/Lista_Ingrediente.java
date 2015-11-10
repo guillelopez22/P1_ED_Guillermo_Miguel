@@ -3,6 +3,7 @@ package Clases;
 public class Lista_Ingrediente {
 
     Nodo_Ingrediente head;
+    int size = 0;
 
     public Lista_Ingrediente() {
         head = new Nodo_Ingrediente();
@@ -78,12 +79,11 @@ public class Lista_Ingrediente {
         System.out.println("");
     }
 
-    public int size() {
-        int size = 0;
-        for (Nodo_Ingrediente n = head; n.next != null; n = n.next) {
-            size++;
-        }
-        return size;
+    public void setSize(int cont) {
+         size = cont;
+    }
+    public int size(){
+        return size; 
     }
 
 }

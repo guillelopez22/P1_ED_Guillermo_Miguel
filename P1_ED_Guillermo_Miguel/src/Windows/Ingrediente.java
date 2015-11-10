@@ -115,6 +115,7 @@ public class Ingrediente extends javax.swing.JFrame {
         if (cont_ingredientes_almacen == 0) {
             lista_ingredientes.insert(Ingrediente, 0);
             tam_lista_ingredientes++;
+            lista_ingredientes.setSize(tam_lista_ingredientes);
         } else {
             for (int i = 0; i < cont_ingredientes_almacen; i++) {
                 if (Ingrediente.getNombre().equals(lista_almacen_ingredientes.get(i).getNombre())) {
@@ -125,10 +126,12 @@ public class Ingrediente extends javax.swing.JFrame {
             if (veces_repetidas == 0) {
                 lista_ingredientes.insert(Ingrediente, tam_lista_ingredientes);
                 tam_lista_ingredientes++;
+                lista_ingredientes.setSize(tam_lista_ingredientes);
             }
         }
-
+        
         cont_ingredientes_almacen++;
+        lista_almacen_ingredientes.setSize(cont_ingredientes_almacen);
 
         System.out.print("almacen: ");
         for (int i = 0; i < cont_ingredientes_almacen; i++) {
