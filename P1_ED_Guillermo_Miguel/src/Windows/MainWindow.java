@@ -152,9 +152,9 @@ public class MainWindow extends javax.swing.JFrame {
 
         DefaultComboBoxModel model = new DefaultComboBoxModel();
         model.addElement("--Seleccione un Ingrediente--");
-        for (int i = 0; i < cont_ingredientes_almacen; i++) {
-            System.out.println(lista_almacen_ingredientes.get(i));
-            model.addElement(lista_almacen_ingredientes.get(i));
+        for (int i = 0; i < tam_lista_ingredientes; i++) {
+            System.out.println(lista_ingredientes.get(i));
+            model.addElement(lista_ingredientes.get(i));
         }
         cb_ingredientes.setModel(model);
 
