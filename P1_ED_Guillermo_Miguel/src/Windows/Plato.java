@@ -193,6 +193,16 @@ public class Plato extends javax.swing.JFrame {
             Menu.setIngrediente(temp2);
             cb_tiempo.setSelectedIndex(0);
             lista_menu.insert(Menu, cont_menu);
+        
+            DefaultComboBoxModel model = new DefaultComboBoxModel();
+            for (int i = 0; i < 1000; i++) {
+            System.out.println(Menu.getIngrediente().get(i).getNombre());
+            model.addElement(Menu.getIngrediente().get(i).getNombre());
+                //cb_ingredientesmod.setModel(model);
+
+            }
+        cb_ingredientesmod.setModel(model);
+
             cont_menu ++;
         }
         
@@ -211,12 +221,7 @@ public class Plato extends javax.swing.JFrame {
         cont++;
         cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
         lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
-        DefaultComboBoxModel model = new DefaultComboBoxModel();
-        for (int i = 0; i < cont_menu; i++) {
-            System.out.println(cont_menu);
-            model.addElement(temp2.get(i));
-        }
-        cb_ingredientesmod.setModel(model);
+        
 //        cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
 //        lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
 

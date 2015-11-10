@@ -181,11 +181,7 @@ public class modificar_plato extends javax.swing.JFrame {
 
     private void cb_ingredientesmodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_ingredientesmodActionPerformed
         // TODO add your handling code here:
-        DefaultComboBoxModel model = new DefaultComboBoxModel();
-        for (int i = 0; i < lista_ingredientes.getSize(); i++) {
-            model.addElement(lista_ingredientes.get(i));
-        }
-        cb_ingredientesmod.setModel(model);
+        
     }//GEN-LAST:event_cb_ingredientesmodActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
