@@ -199,7 +199,8 @@ public class Plato extends javax.swing.JFrame {
             cont_menu ++;
         }
         
-
+        temp2 = new Lista_Ingrediente();
+        cont = 0;
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -209,15 +210,10 @@ public class Plato extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        temp2 = new Lista_Ingrediente();
-        temp2.insert(lista_almacen_ingredientes.get(cb_ingredientes.getSelectedIndex()), cont);
+        temp2.insert(lista_ingredientes.get(cb_ingredientes.getSelectedIndex() - 1), cont);
         
         cont++;
-        cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
-        
-
-        
-        lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
+        temp2.setSize(cont);
 
 //        cb_ingredientesmod.setModel(model);
 //        lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
@@ -281,5 +277,5 @@ public class Plato extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     Lista_Ingrediente temp2 = new Lista_Ingrediente();
-    int cont;
+    int cont = 0;
 }

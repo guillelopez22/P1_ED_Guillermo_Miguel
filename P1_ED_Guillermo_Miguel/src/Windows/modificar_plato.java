@@ -196,6 +196,7 @@ public class modificar_plato extends javax.swing.JFrame {
         tf_desc.setText(lista_menu.get(cb_modplato.getSelectedIndex()-1).getDescrpcion());
         sp_precio.setValue(lista_menu.get(cb_modplato.getSelectedIndex()-1).getPrecio());
         DefaultComboBoxModel model = new DefaultComboBoxModel();
+        System.out.println(lista_menu.get(cb_modplato.getSelectedIndex()-1).getIngrediente().size());
         for (int i = 0; i < lista_menu.get(cb_modplato.getSelectedIndex()-1).getIngrediente().size(); i++) {
             model.addElement(lista_menu.get(cb_modplato.getSelectedIndex()-1).getIngrediente().get(i).getNombre());
         }
@@ -204,7 +205,7 @@ public class modificar_plato extends javax.swing.JFrame {
         for (int i = 0; i < tam_lista_ingredientes; i++) {
             model1.addElement(lista_ingredientes.get(i).getNombre());
         }
-        cb_ingredientesmod.setModel(model);
+        cb_ingredientesmod.setModel(model1);
     }//GEN-LAST:event_cb_modplatoItemStateChanged
 
     /**
