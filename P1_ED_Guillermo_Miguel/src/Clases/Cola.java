@@ -50,6 +50,7 @@ public class Cola {
         return contador;
     }
 
+    @Override
     public String toString() {
         Nodo_ordenes c = this.inicio;
         String s = "";

@@ -5,10 +5,12 @@
  */
 package Windows;
 
+import Clases.Cola;
+import Clases.ordenes;
 import static Windows.MainWindow.a_pagar;
 import static Windows.MainWindow.lista_menu;
 import static Windows.MainWindow.tiempo_total;
-
+import static Windows.MainWindow.ordenes;
 /**
  *
  * @author Memo
@@ -66,6 +68,11 @@ public class Orden extends javax.swing.JFrame {
         lb_ttotal.setText("0");
 
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Add");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -163,6 +170,20 @@ public class Orden extends javax.swing.JFrame {
 //        cb_platos_pedidos.removeItemAt(cb_platos_pedidos.getSelectedIndex());
 //        lista_menu.delete(cb_platos_pedidos.getSelectedIndex());
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String txt = lb_numero.getText();
+        int num = Integer.parseInt(txt);
+        String txt3 = lb_total.getText();
+        int total = Integer.parseInt(txt3);
+        
+        
+        ordenes orden= new ordenes(num,tf_nomCliente.getText(),lista_menu.get(cb_platos_pedidos.getSelectedIndex()).getIngrediente(),
+        total,tiempo_total);
+        ordenes.insertar(orden);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
