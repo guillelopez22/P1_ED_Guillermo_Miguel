@@ -160,8 +160,8 @@ public class Orden extends javax.swing.JFrame {
         tiempo_total =  tiempo_total + temp.getTimpo();
         lb_ttotal.setText(Integer.toString(tiempo_total)  + ":00");
         lb_total.setText(Integer.toString(a_pagar));
-        cb_platos_pedidos.removeItemAt(cb_platos_pedidos.getSelectedIndex());
-        lista_menu.delete(cb_platos_pedidos.getSelectedIndex());
+//        cb_platos_pedidos.removeItemAt(cb_platos_pedidos.getSelectedIndex());
+//        lista_menu.delete(cb_platos_pedidos.getSelectedIndex());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
