@@ -15,6 +15,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
 import static Windows.Orden.lb_numero;
+import static Windows.modificar_plato.cb_modplato;
 
 /**
  *
@@ -223,6 +224,13 @@ public class MainWindow extends javax.swing.JFrame {
         platos.pack();
         platos.setVisible(true);
         platos.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        model.addElement("--Seleccione un Plato--");
+        for (int i = 0; i < cont_menu; i++) {
+           model.addElement(lista_menu.get(i).getNombre());
+        }
+        cb_modplato.setModel(model);
+        
         
         
 

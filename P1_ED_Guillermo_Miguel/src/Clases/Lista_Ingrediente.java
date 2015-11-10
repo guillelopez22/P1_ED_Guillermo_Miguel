@@ -1,5 +1,7 @@
 package Clases;
+
 public class Lista_Ingrediente {
+
     Nodo_Ingrediente head;
 
     public Lista_Ingrediente() {
@@ -7,15 +9,15 @@ public class Lista_Ingrediente {
     }
 
     public void insert(ingredientes ingrediente, int pos) {
-        Nodo_Ingrediente newNodo= new Nodo_Ingrediente(ingrediente);
+        Nodo_Ingrediente newNodo = new Nodo_Ingrediente(ingrediente);
         Nodo_Ingrediente newHead = head;
         int cont = 0;
-        if(pos==0){
+        if (pos == 0) {
             newNodo.setNext(head);
             this.setHead(newNodo);
         }
-        while (newHead.getNext()!=null) {
-            newHead =newHead.getNext();
+        while (newHead.getNext() != null) {
+            newHead = newHead.getNext();
             cont++;
             if (cont == pos) {
                 break;
@@ -25,9 +27,9 @@ public class Lista_Ingrediente {
         newHead.setNext(newNodo);
         newNodo.setNext(n);
     }
-    
-    public void setHead(Nodo_Ingrediente head){
-        this.head=head;
+
+    public void setHead(Nodo_Ingrediente head) {
+        this.head = head;
     }
 
     public int find(int num) {
@@ -36,9 +38,9 @@ public class Lista_Ingrediente {
 
     public ingredientes get(int pos) {
         Nodo_Ingrediente temp = head;
-        ingredientes valor= temp.getValue();
-        for(int i=0;i<pos;i++){
-            temp=temp.getNext();
+        ingredientes valor = temp.getValue();
+        for (int i = 0; i < pos; i++) {
+            temp = temp.getNext();
             valor = temp.getValue();
         }
         return valor;
@@ -46,7 +48,7 @@ public class Lista_Ingrediente {
 
     public void delete(int pos) {
         Nodo_Ingrediente temp = head;
-        for (int i=1;i<pos-1;i++){
+        for (int i = 1; i < pos - 1; i++) {
             temp = temp.getNext();
         }
         Nodo_Ingrediente temp2 = temp.getNext();
@@ -56,31 +58,32 @@ public class Lista_Ingrediente {
     public Object first() {
         return head.getValue();
     }
-    
-    public void Print_Lista(){        
+
+    public void Print_Lista() {
         Nodo_Ingrediente temp = head;
         int cont = 0;
-        while(temp != null){
-            if(cont == 0){
+        while (temp != null) {
+            if (cont == 0) {
                 System.out.print("[H]");
             }
-            if(temp.getNext() != null){
+            if (temp.getNext() != null) {
                 System.out.print("[" + temp.getValue() + "] - ");
                 cont++;
-            }else{
-                System.out.print("[" + temp.getValue() + "]" );
+            } else {
+                System.out.print("[" + temp.getValue() + "]");
                 cont++;
             }
             temp = temp.next;
         }
         System.out.println("");
-    } 
-    public int getSize() {
-        int cont = 0;
-        while (head.getNext() != null) {
-            cont++;
+    }
+
+    public int size() {
+        int size = 0;
+        for (Nodo_Ingrediente n = head; n.next != null; n = n.next) {
+            size++;
         }
-        return cont;
+        return size;
     }
 
 }

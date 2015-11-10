@@ -218,8 +218,11 @@ public class Plato extends javax.swing.JFrame {
         // TODO add your handling code here:
         temp2 = new Lista_Ingrediente();
         temp2.insert(lista_almacen_ingredientes.get(cb_ingredientes.getSelectedIndex()), cont);
+        
         cont++;
         cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
+        
+        cb_ingredientesmod.setModel(model);
         lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
         
 //        cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());

@@ -5,10 +5,9 @@
  */
 package Windows;
 
-import static Windows.MainWindow.cont_menu;
 import static Windows.MainWindow.lista_ingredientes;
-import static Windows.MainWindow.num_orden;
-import static Windows.Orden.cb_platos_pedidos;
+import static Windows.MainWindow.lista_menu;
+import static Windows.MainWindow.tam_lista_ingredientes;
 import javax.swing.DefaultComboBoxModel;
 
 /**
@@ -94,6 +93,12 @@ public class modificar_plato extends javax.swing.JFrame {
 
         jLabel3.setText("Descripcion:");
 
+        cb_modplato.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_modplatoItemStateChanged(evt);
+            }
+        });
+
         jButton3.setText("Eliminar Ingrediente");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,9 +116,7 @@ public class modificar_plato extends javax.swing.JFrame {
                                 .addComponent(eliminar_ingrediente, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
                                 .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addContainerGap()
@@ -188,6 +191,22 @@ public class modificar_plato extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void cb_modplatoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_modplatoItemStateChanged
+        // TODO add your handling code here:
+        tf_desc.setText(lista_menu.get(cb_modplato.getSelectedIndex()-1).getDescrpcion());
+        sp_precio.setValue(lista_menu.get(cb_modplato.getSelectedIndex()-1).getPrecio());
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        for (int i = 0; i < lista_menu.get(cb_modplato.getSelectedIndex()-1).getIngrediente().size(); i++) {
+            model.addElement(lista_menu.get(cb_modplato.getSelectedIndex()-1).getIngrediente().get(i).getNombre());
+        }
+        eliminar_ingrediente.setModel(model);
+        DefaultComboBoxModel model1 = new DefaultComboBoxModel();
+        for (int i = 0; i < tam_lista_ingredientes; i++) {
+            model1.addElement(lista_ingredientes.get(i).getNombre());
+        }
+        cb_ingredientesmod.setModel(model);
+    }//GEN-LAST:event_cb_modplatoItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -225,7 +244,7 @@ public class modificar_plato extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JComboBox cb_ingredientesmod;
-    private javax.swing.JComboBox cb_modplato;
+    public static javax.swing.JComboBox cb_modplato;
     private javax.swing.JComboBox eliminar_ingrediente;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
