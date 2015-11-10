@@ -5,6 +5,7 @@
  */
 package Windows;
 
+import Clases.Cola;
 import Clases.Lista_Ingrediente;
 import Clases.Lista_Menu;
 import Clases.Lista_Pilas;
@@ -16,6 +17,7 @@ import javax.swing.JFrame;
 import static Windows.Plato.cb_ingredientes;
 import static Windows.Orden.lb_numero;
 import static Windows.modificar_plato.cb_modplato;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -73,6 +75,11 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         jMenuItem5.setText("Cocinar Ordenes...");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem5);
 
         jMenuBar1.add(jMenu2);
@@ -227,12 +234,10 @@ public class MainWindow extends javax.swing.JFrame {
         DefaultComboBoxModel model = new DefaultComboBoxModel();
         model.addElement("--Seleccione un Plato--");
         for (int i = 0; i < cont_menu; i++) {
-           model.addElement(lista_menu.get(i).getNombre());
+            model.addElement(lista_menu.get(i).getNombre());
         }
         cb_modplato.setModel(model);
-        
-        
-        
+
 
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
@@ -263,6 +268,27 @@ public class MainWindow extends javax.swing.JFrame {
         }
         cb_item.setModel(model);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        Runnable runnable = () -> {
+            try {
+                //while (ordenes.estaVacia() == false) {
+                    for (int i = 1; i <= cocineros; i++) {
+                        //String name = Thread.currentThread().getName();
+                        System.out.println("Cocinero " + i + " cocinando nunmero de orden " + ordenes.extraer().getNum_orden());
+                        TimeUnit.SECONDS.sleep(1);
+                    }
+                //}
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        };
+
+        Thread thread = new Thread(runnable);
+        thread.start();
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -328,5 +354,7 @@ public class MainWindow extends javax.swing.JFrame {
     public static int a_pagar = 0;
     public static int num_orden = 0;
     public static int tiempo_total = 0;
+    public static Cola ordenes = new Cola();
+    public static int cocineros = 2;
 
 }
