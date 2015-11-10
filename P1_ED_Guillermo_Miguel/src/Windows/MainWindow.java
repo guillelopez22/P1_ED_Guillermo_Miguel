@@ -7,6 +7,7 @@ package Windows;
 
 import Clases.Lista_Ingrediente;
 import Clases.Lista_Menu;
+import Clases.Lista_Pilas;
 import Clases.Lista_ordenes;
 import static Windows.Orden.cb_platos_pedidos;
 import javax.swing.DefaultComboBoxModel;
@@ -135,9 +136,10 @@ public class MainWindow extends javax.swing.JFrame {
         plato.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         DefaultComboBoxModel model = new DefaultComboBoxModel();
-        for (int i = 0; i < cont_ingredientes; i++) {
-            System.out.println(lista_ingredientes.get(i));
-            model.addElement(lista_ingredientes.get(i));
+        model.addElement("--Seleccione un Ingrediente--");
+        for (int i = 0; i < cont_ingredientes_almacen; i++) {
+            System.out.println(lista_almacen_ingredientes.get(i));
+            model.addElement(lista_almacen_ingredientes.get(i));
         }
         cb_ingredientes.setModel(model);
 
@@ -231,10 +233,13 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
+    public static Lista_Ingrediente lista_almacen_ingredientes = new Lista_Ingrediente();
+    public static Lista_Pilas lista_pilas_ingredientes = new Lista_Pilas();
     public static Lista_Ingrediente lista_ingredientes = new Lista_Ingrediente();
+    public static int tam_lista_ingredientes = 0;
     public static Lista_ordenes lista_ordenes = new Lista_ordenes();
     public static Lista_Menu lista_menu = new Lista_Menu();
-    public static int cont_ingredientes = 0;
+    public static int cont_ingredientes_almacen = 0;
     public static int cont_menu = 0;
     public static int a_pagar = 0;
     public static int num_orden = 0;

@@ -5,10 +5,13 @@
  */
 package Windows;
 
+import Clases.Pila;
 import Clases.ingredientes;
-import static Windows.MainWindow.cont_ingredientes;
+import static Windows.MainWindow.cont_ingredientes_almacen;
+import static Windows.MainWindow.lista_almacen_ingredientes;
 import static Windows.MainWindow.lista_ingredientes;
-import static Windows.Plato.cb_ingredientes;
+import static Windows.MainWindow.lista_pilas_ingredientes;
+import static Windows.MainWindow.tam_lista_ingredientes;
 import javax.swing.DefaultComboBoxModel;
 
 /**
@@ -107,18 +110,31 @@ public class Ingrediente extends javax.swing.JFrame {
         ingredientes Ingrediente = new ingredientes();
         Ingrediente.setNombre(tf_nomIngrediente.getText());
         Ingrediente.setDescripcion(tf_desc.getText());
-       
+        lista_almacen_ingredientes.insert(Ingrediente, cont_ingredientes_almacen);
+        
+        Pila pila_ingredientes = new Pila();
+        if (cont_ingredientes_almacen == 0) {
+            lista_ingredientes.insert(Ingrediente, 0);
+            pila_ingredientes.push(Ingrediente);
+            lista_pilas_ingredientes.insert(pila_ingredientes, 0);
+        }
+        boolean agregar_a_lista = true;
+        for (int i = 0; i < cont_ingredientes_almacen; i++) {
+            if (Ingrediente.getNombre() == lista_almacen_ingredientes.get(i).getNombre()) {
+                agregar_a_lista = false;
+            }
+        }
+        if (agregar_a_lista) {
+            lista_ingredientes.insert(Ingrediente, tam_lista_ingredientes);
+            tam_lista_ingredientes++;
+        }
 
-        lista_ingredientes.insert(Ingrediente, cont_ingredientes);
-        lista_ingredientes.Print_Lista();
+        cont_ingredientes_almacen++;
+
+        lista_almacen_ingredientes.Print_Lista();
         tf_nomIngrediente.setText("");
         tf_desc.setText("");
-        cont_ingredientes ++;
-        for (int i = 0; i < cont_ingredientes; i++) {
-            System.out.println(lista_ingredientes.get(i));
-        }
-        
-        
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

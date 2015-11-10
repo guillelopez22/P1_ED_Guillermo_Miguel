@@ -9,7 +9,7 @@ import Clases.Lista_Ingrediente;
 import Clases.Menu;
 import static Windows.MainWindow.cont_menu;
 import javax.swing.JOptionPane;
-import static Windows.MainWindow.lista_ingredientes;
+import static Windows.MainWindow.lista_almacen_ingredientes;
 import static Windows.MainWindow.lista_menu;
 
 
@@ -119,17 +119,16 @@ public class Plato extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel7))
                             .addComponent(sp_precio, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton2))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(cb_ingredientes, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1)))
-                        .addGap(51, 51, 51))))
+                        .addContainerGap(93, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addGap(51, 51, 51))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(cb_ingredientes, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1)
+                        .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
@@ -203,10 +202,10 @@ public class Plato extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         temp2 = new Lista_Ingrediente();
-        temp2.insert(lista_ingredientes.get(cb_ingredientes.getSelectedIndex()), cont);
+        temp2.insert(lista_almacen_ingredientes.get(cb_ingredientes.getSelectedIndex()), cont);
         cont++;
-        cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
-        lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
+//        cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
+//        lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
