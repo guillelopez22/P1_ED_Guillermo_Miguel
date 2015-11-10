@@ -5,6 +5,11 @@
  */
 package Windows;
 
+import static Windows.MainWindow.cont_ingredientes_almacen;
+import static Windows.MainWindow.lista_almacen_ingredientes;
+import static Windows.MainWindow.lista_ingredientes;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Memo
@@ -37,6 +42,11 @@ public class Almacen extends javax.swing.JFrame {
         jLabel1.setText("Inventario");
 
         cb_item.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_item.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_itemItemStateChanged(evt);
+            }
+        });
 
         jLabel2.setText("Cantidad: ");
 
@@ -47,19 +57,18 @@ public class Almacen extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lb_cant)
-                        .addGap(39, 122, Short.MAX_VALUE))
-                    .addComponent(cb_item, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(59, 59, 59)))
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lb_cant)
+                .addContainerGap(132, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(69, 69, 69))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(cb_item, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -77,6 +86,22 @@ public class Almacen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cb_itemItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_itemItemStateChanged
+        // TODO add your handling code here:
+        int existencias = 0;
+        if (cb_item.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(this, "Favor seleccionar un ingrediente para ver las existencias...");
+        }else{
+            for (int i = 0; i < cont_ingredientes_almacen; i++) {
+                if (lista_ingredientes.get(cb_item.getSelectedIndex()-1).getNombre().equals(lista_almacen_ingredientes.get(i).getNombre())) {
+                    existencias++;
+                }
+            }
+            lb_cant.setText(Integer.toString(existencias));
+ 
+        }
+    }//GEN-LAST:event_cb_itemItemStateChanged
 
     /**
      * @param args the command line arguments
