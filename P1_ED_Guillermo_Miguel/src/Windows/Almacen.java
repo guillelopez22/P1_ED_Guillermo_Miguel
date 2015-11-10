@@ -5,9 +5,11 @@
  */
 package Windows;
 
+import Clases.Pila;
 import static Windows.MainWindow.cont_ingredientes_almacen;
 import static Windows.MainWindow.lista_almacen_ingredientes;
 import static Windows.MainWindow.lista_ingredientes;
+import static Windows.MainWindow.lista_pilas_ingredientes;
 import javax.swing.JOptionPane;
 
 /**
@@ -99,7 +101,22 @@ public class Almacen extends javax.swing.JFrame {
                 }
             }
             lb_cant.setText(Integer.toString(existencias));
- 
+        }
+        for (int i = 0; i < lista_ingredientes.size(); i++) {
+            Pila pila = new Pila();
+            lista_pilas_ingredientes.insert(pila, i);
+        }
+        int cont = 0;
+        for (int i = 0; i < lista_ingredientes.size(); i++) {
+            for (int j = 0; j < lista_almacen_ingredientes.size(); j++) {
+                if (lista_ingredientes.get(i).getNombre().equals(lista_almacen_ingredientes.get(j).getNombre())) {
+                    cont ++;
+                }
+            }
+            for (int j = 0; j < cont; j++) {
+                lista_pilas_ingredientes.get(j).push(lista_ingredientes.get(i));
+            }
+            cont = 0;
         }
     }//GEN-LAST:event_cb_itemItemStateChanged
 

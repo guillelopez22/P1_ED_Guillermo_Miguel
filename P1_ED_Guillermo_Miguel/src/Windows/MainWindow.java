@@ -51,13 +51,13 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
 
@@ -93,28 +93,6 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jMenu7.setText("Platillos");
-        jMenu7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu7ActionPerformed(evt);
-            }
-        });
-
-        jMenuItem7.setText("Modificar");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
-            }
-        });
-        jMenu7.add(jMenuItem7);
-
-        jMenuItem8.setText("Eliminar");
-        jMenu7.add(jMenuItem8);
-
-        jMenu1.add(jMenu7);
-
-        jMenu3.add(jMenu1);
-
         jMenu5.setText("Agregar");
 
         jMenuItem3.setText("Ingrediente...");
@@ -141,7 +119,29 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem9);
 
-        jMenu3.add(jMenu5);
+        jMenu1.add(jMenu5);
+
+        jMenu7.setText("Platillos");
+        jMenu7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu7ActionPerformed(evt);
+            }
+        });
+
+        jMenuItem7.setText("Modificar");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem7);
+
+        jMenuItem8.setText("Eliminar");
+        jMenu7.add(jMenuItem8);
+
+        jMenu1.add(jMenu7);
+
+        jMenu3.add(jMenu1);
 
         jMenuBar1.add(jMenu3);
 
