@@ -222,8 +222,8 @@ public class Plato extends javax.swing.JFrame {
         cont++;
         cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
         
-        cb_ingredientesmod.setModel(model);
-        lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
+//        cb_ingredientesmod.setModel(model);
+//        lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
         
 //        cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
 //        lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
