@@ -5,10 +5,10 @@
  */
 package Windows;
 
-import Clases.Cola;
 import Clases.ordenes;
 import static Windows.MainWindow.a_pagar;
 import static Windows.MainWindow.lista_menu;
+import static Windows.MainWindow.num_orden;
 import static Windows.MainWindow.tiempo_total;
 import static Windows.MainWindow.ordenes;
 /**
@@ -182,6 +182,13 @@ public class Orden extends javax.swing.JFrame {
         ordenes orden= new ordenes(num,tf_nomCliente.getText(),lista_menu.get(cb_platos_pedidos.getSelectedIndex()).getIngrediente(),
         total,tiempo_total);
         ordenes.insertar(orden);
+        
+        num_orden++;
+        lb_total.setText("0");
+        lb_ttotal.setText("0");
+        tf_nomCliente.setText("");
+        tiempo_total =0;
+        a_pagar = 0;
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

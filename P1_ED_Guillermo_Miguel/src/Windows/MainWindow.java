@@ -355,6 +355,6 @@ public class MainWindow extends javax.swing.JFrame {
     public static int num_orden = 0;
     public static int tiempo_total = 0;
     public static Cola ordenes = new Cola();
-    public static int cocineros = 2;
+    public static int cocineros = 4;
 
 }
