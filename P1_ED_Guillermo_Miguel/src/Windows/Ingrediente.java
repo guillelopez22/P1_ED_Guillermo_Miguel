@@ -111,26 +111,35 @@ public class Ingrediente extends javax.swing.JFrame {
         Ingrediente.setNombre(tf_nomIngrediente.getText());
         Ingrediente.setDescripcion(tf_desc.getText());
         lista_almacen_ingredientes.insert(Ingrediente, cont_ingredientes_almacen);
-        
-        Pila pila_ingredientes = new Pila();
+        int veces_repetidas = 0;
         if (cont_ingredientes_almacen == 0) {
             lista_ingredientes.insert(Ingrediente, 0);
-            pila_ingredientes.push(Ingrediente);
-            lista_pilas_ingredientes.insert(pila_ingredientes, 0);
-        }
-        boolean agregar_a_lista = true;
-        for (int i = 0; i < cont_ingredientes_almacen; i++) {
-            if (Ingrediente.getNombre() == lista_almacen_ingredientes.get(i).getNombre()) {
-                agregar_a_lista = false;
-            }
-        }
-        if (agregar_a_lista) {
-            lista_ingredientes.insert(Ingrediente, tam_lista_ingredientes);
             tam_lista_ingredientes++;
+        } else {
+            for (int i = 0; i < cont_ingredientes_almacen; i++) {
+                if (Ingrediente.getNombre() == lista_almacen_ingredientes.get(i).getNombre()) {
+                    veces_repetidas++;
+                }
+            }
+            System.out.println(veces_repetidas);
+            if (veces_repetidas == 0) {
+                lista_ingredientes.insert(Ingrediente, tam_lista_ingredientes);
+                tam_lista_ingredientes++;
+            }
         }
 
         cont_ingredientes_almacen++;
 
+        System.out.print("almacen: ");
+        for (int i = 0; i < cont_ingredientes_almacen; i++) {
+            System.out.print(lista_almacen_ingredientes.get(i).getNombre());
+        }
+        System.out.println("");
+        System.out.print("lista: ");
+        for (int i = 0; i < tam_lista_ingredientes; i++) {
+            System.out.print(lista_ingredientes.get(i).getNombre());
+        }
+        System.out.println("");
         lista_almacen_ingredientes.Print_Lista();
         tf_nomIngrediente.setText("");
         tf_desc.setText("");
