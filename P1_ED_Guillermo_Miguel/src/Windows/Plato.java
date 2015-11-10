@@ -194,14 +194,7 @@ public class Plato extends javax.swing.JFrame {
             cb_tiempo.setSelectedIndex(0);
             lista_menu.insert(Menu, cont_menu);
         
-            DefaultComboBoxModel model = new DefaultComboBoxModel();
-            for (int i = 0; i < 1000; i++) {
-            System.out.println(Menu.getIngrediente().get(i).getNombre());
-            model.addElement(Menu.getIngrediente().get(i).getNombre());
-                //cb_ingredientesmod.setModel(model);
-
-            }
-        cb_ingredientesmod.setModel(model);
+            
 
             cont_menu ++;
         }
