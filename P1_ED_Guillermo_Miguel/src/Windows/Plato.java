@@ -8,9 +8,12 @@ package Windows;
 import Clases.Lista_Ingrediente;
 import Clases.Menu;
 import static Windows.MainWindow.cont_menu;
-import javax.swing.JOptionPane;
+import static Windows.MainWindow.cont_ingredientes;
 import static Windows.MainWindow.lista_ingredientes;
+import javax.swing.JOptionPane;
 import static Windows.MainWindow.lista_menu;
+import static Windows.modificar_plato.cb_ingredientesmod;
+import javax.swing.DefaultComboBoxModel;
 
 
 /**
@@ -192,6 +195,7 @@ public class Plato extends javax.swing.JFrame {
             lista_menu.insert(Menu, cont_menu);
             cont_menu ++;
         }
+        
 
         
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -207,6 +211,12 @@ public class Plato extends javax.swing.JFrame {
         cont++;
         cb_ingredientes.removeItemAt(cb_ingredientes.getSelectedIndex());
         lista_ingredientes.delete(cb_ingredientes.getSelectedIndex());
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        for (int i = 0; i < cont_menu; i++) {
+            System.out.println(cont_menu);
+            model.addElement(temp2.get(i));
+        }
+        cb_ingredientesmod.setModel(model);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -47,6 +47,7 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
@@ -94,7 +95,19 @@ public class MainWindow extends javax.swing.JFrame {
 
         jMenu3.setText("Edit");
 
+        jMenu1.setText("Menu");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
+
         jMenu7.setText("Platillos");
+        jMenu7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu7ActionPerformed(evt);
+            }
+        });
 
         jMenuItem7.setText("Modificar");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +120,9 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuItem8.setText("Eliminar");
         jMenu7.add(jMenuItem8);
 
-        jMenu3.add(jMenu7);
+        jMenu1.add(jMenu7);
+
+        jMenu3.add(jMenu1);
 
         jMenuBar1.add(jMenu3);
 
@@ -159,15 +174,6 @@ public class MainWindow extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        modificar_plato platos = new modificar_plato();
-        platos.pack();
-        platos.setVisible(true);
-        platos.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
-
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
         Orden orden = new Orden();
@@ -182,6 +188,26 @@ public class MainWindow extends javax.swing.JFrame {
         cb_platos_pedidos.setModel(model);
         lb_numero.setText(Integer.toString(num_orden));
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        modificar_plato platos = new modificar_plato();
+        platos.pack();
+        platos.setVisible(true);
+        platos.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        
+
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+        //uno
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
+        // TODO add your handling code here:
+        //dos
+    }//GEN-LAST:event_jMenu7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -219,6 +245,7 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu5;
