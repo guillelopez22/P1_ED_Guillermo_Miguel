@@ -117,7 +117,7 @@ public class Ingrediente extends javax.swing.JFrame {
             tam_lista_ingredientes++;
         } else {
             for (int i = 0; i < cont_ingredientes_almacen; i++) {
-                if (Ingrediente.getNombre() == lista_almacen_ingredientes.get(i).getNombre()) {
+                if (Ingrediente.getNombre().equals(lista_almacen_ingredientes.get(i).getNombre())) {
                     veces_repetidas++;
                 }
             }
